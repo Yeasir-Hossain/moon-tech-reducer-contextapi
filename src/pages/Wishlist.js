@@ -17,7 +17,7 @@ const Wishlist = () => {
 
     }
     if (!loading && !error && wishlist.length) {
-        content = wishlist.map((product, index) => <ProductCard key={index} product={product}></ProductCard>)
+        content = wishlist.map((product) => <ProductCard key={product._id} product={product}></ProductCard>)
 
     }
     return (

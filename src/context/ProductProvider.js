@@ -5,7 +5,6 @@ import { actionType } from '../state/ProductState/actionTypes'
 const PRODUCT_CONTEXT = createContext()
 const ProductProvider = ({ children }) => {
   const [state, dispatch] = useReducer(ProductReducer, initialstate)
-  console.log(state);
   useEffect(() => {
     dispatch({ type: actionType.FETCHINGSTART })
     fetch('http://localhost:5000/products')

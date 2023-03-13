@@ -17,7 +17,7 @@ const Home = () => {
 
   }
   if (!loading && !error && products.length) {
-    content = products.map((product, index) => <ProductCard key={index} product={product}></ProductCard>)
+    content = products.map((product) => <ProductCard key={product._id} product={product}></ProductCard>)
 
   }
   return (

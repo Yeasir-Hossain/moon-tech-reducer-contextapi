@@ -17,7 +17,7 @@ const Cart = () => {
 
   }
   if (!loading && !error && cart.length) {
-    content = cart.map((product, index) => <ProductCard key={index} product={product}></ProductCard>)
+    content = cart.map((product) => <ProductCard key={product._id} product={product}></ProductCard>)
 
   }
   return (

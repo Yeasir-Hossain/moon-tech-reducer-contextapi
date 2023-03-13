@@ -17,7 +17,7 @@ const TopRated = () => {
 
   }
   if (!loading && !error && products.length) {
-    content = products.filter(product => product.rating >= 4).map((product, index) => <ProductCard key={index} product={product}></ProductCard>)
+    content = products.filter(product => product.rating >= 4).map((product) => <ProductCard key={product._id} product={product}></ProductCard>)
 
   }
   return (
